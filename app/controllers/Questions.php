@@ -24,11 +24,17 @@ class Questions extends GenericController{
 	/*----------MORE---------*/
 
 	public function getQuestionnaire($id){
-		$question=Question::find("questionnaire_id=".$id);
+		$question=Question::find("questionnaire=".$id);
 		$question=$question->toArray();
 		if(sizeof($question)==0)
-			throw new NotFound("Aucune question trouvé pour le questionnaire.");
+			throw new NotFound("Aucune question trouvÃ©e pour le questionnaire.");
 		return $question;
 	}
 	
+	public function getReponse($posted){
+		var_dump($posted);
+		//$reponse_choisie=Reponse::find("question=".$id);
+		//$reponse_exacte=Reponse::find("question=".$id." AND good=1");
+		//return $reponse_choisie->toArray();
+	}
 }

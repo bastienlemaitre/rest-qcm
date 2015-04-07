@@ -62,7 +62,7 @@ class UsersController extends Controller {
 		$this->response->setContentType('application/json', 'utf-8');
 		if($this->session->has("token")){
 			echo '{"token":"'.$this->session->get("token").'","connected":true}';
-		}else{			
+		}else{
 			echo '{"connected":false}';
 		}
 	}

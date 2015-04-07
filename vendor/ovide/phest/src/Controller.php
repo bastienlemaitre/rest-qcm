@@ -142,8 +142,14 @@ abstract class Controller extends \Phalcon\Mvc\Controller
                 }
                 break;
             case 'POST':
-                $this->_curMethod = 'post';
-                $this->_method(null, $params);
+            	if(sizeof($params)==1){
+            		$method=array_pop($params);
+            		$this->_curMethod = 'get'.ucfirst($method);
+            		$this->_method($id, $params);
+            	}else{
+                	$this->_curMethod = 'post';
+               		$this->_method(null, $params);
+            	}
                 break;
             case 'PUT':
                 $this->_curMethod = 'put';

@@ -1,5 +1,6 @@
 AddDefaultCharset UTF-8
-Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Origin "http://127.0.0.1"
+Header set Access-Control-Allow-Credentials "true"
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteCond %{REQUEST_FILENAME} !-d

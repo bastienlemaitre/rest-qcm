@@ -11,9 +11,11 @@ class GenericController extends Controller{
 	
 	public function onConstruct() {
 		parent::onConstruct();
+		/*
 		header ("Access-Control-Allow-Origin:*", true);
 		header ("Access-Control-Allow-Methods: GET,OPTIONS", true);
 		header ("Access-Control-Allow-Headers: x-requested-with", true);
+		*/
 	}
 	
 	public function get(){

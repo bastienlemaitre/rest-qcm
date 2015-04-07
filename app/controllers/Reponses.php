@@ -23,10 +23,10 @@ class Reponses extends GenericController{
 	/*----------MORE---------*/
 
 	public function getQuestion($id){
-		$reponse=Reponse::find("question_id=".$id);
+		$reponse=Reponse::find("question=".$id);
 		$reponse=$reponse->toArray();
 		if(sizeof($reponse)==0)
-			throw new NotFound("Aucune réponse trouvé pour la question.");
+			throw new NotFound("Aucune rï¿½ponse trouvï¿½ pour la question.");
 		return $reponse;
 	}
 	
